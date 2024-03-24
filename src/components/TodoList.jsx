@@ -28,8 +28,8 @@ const TodoList = () => {
     
     const handleCheckbox = (id) => {
         const newTask = [...tasks]
-        const newTasks = newTask.map(task=>{
-            task.id === id && (task.complete = !task.complete) ;
+        newTask.map(task=>{
+            return task.id === id && (task.complete = !task.complete) ;
         })
         console.log(newTask)
         // newTask[id]['complete'] = !newTask[id]['complete']
