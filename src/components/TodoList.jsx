@@ -7,8 +7,6 @@ const TodoList = () => {
     const [completedTasks, setCompletedTasks] = useState([])
 
     useEffect(() => {
-        console.log("in effect")
-        console.log(tasks)
         const newArr = tasks.toSorted((a, b) => a.time.localeCompare(b.time))
         const filtered = newArr.filter(task => task.complete === false)
         setIncompletedTasks(filtered)
@@ -31,10 +29,8 @@ const TodoList = () => {
         newTask.map(task=>{
             return task.id === id && (task.complete = !task.complete) ;
         })
-        console.log(newTask)
         // newTask[id]['complete'] = !newTask[id]['complete']
         setTasks(newTask)
-        console.log(tasks)
     }
     return (
         <>
