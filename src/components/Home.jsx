@@ -11,7 +11,7 @@ const Home = () => {
     return (
         <>
             <TodoContext.Provider value={[tasks, setTasks]}>
-                <div className="container max-w-md mx-auto rounded-lg shadow-md ">
+                <div className="container max-w-md mx-auto rounded-lg shadow-md font-nunito">
                     <BrowserRouter>
                         <Routes>
                             <Route path="/" element={<ShowTodos/>} />
